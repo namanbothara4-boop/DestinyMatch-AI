@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DestinyMatchAI 💍</title>
+
+  <!-- ✅ Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-F5RWTGWLL4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-F5RWTGWLL4');
+  </script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #1a001f, #000);
+      color: white;
+      text-align: center;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 2.8em;
+      margin-top: 60px;
+      color: #ff9eff;
+      text-shadow: 0 0 20px #ff9eff;
+    }
+    p.tagline {
+      font-size: 1.1em;
+      color: #e0b3ff;
+      margin-bottom: 40px;
+    }
+    .form-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 30px;
+      width: 90%;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+    }
+    input {
+      width: 90%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 10px;
+      outline: none;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      font-size: 1em;
+    }
+    button {
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: linear-gradient(90deg, #b300ff, #ff66cc);
+      border: none;
+      border-radius: 30px;
+      color: white;
+      font-weight: bold;
+      font-size: 1em;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff66cc;
+    }
+    #result {
+      margin-top: 30px;
+      font-size: 1.2em;
+      line-height: 1.6;
+      color: #ffd6ff;
+      text-shadow: 0 0 10px #ff66cc;
+    }
+    footer {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+    .heart {
+      position: fixed;
+      width: 15px;
+      height: 15px;
+      background: #ff66cc;
+      transform: rotate(45deg);
+      animation: float 8s infinite;
+      opacity: 0.7;
+    }
+    .heart::before, .heart::after {
+      content: '';
+      position: absolute;
+      width: 15px;
+      height: 15px;
+      background: #ff66cc;
+      border-radius: 50%;
+    }
+    .heart::before { top: -8px; left: 0; }
+    .heart::after { left: 8px; top: 0; }
+    @keyframes float {
+      0% { transform: translateY(0) rotate(45deg); opacity: 0.8; }
+      100% { transform: translateY(-800px) rotate(45deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>DestinyMatchAI 💍</h1>
+  <p class="tagline">Where AI meets destiny — find out what fate says about your love.</p>
+
+  <div class="form-box">
+    <input type="text" id="name1" placeholder="Your Name" />
+    <input type="text" id="name2" placeholder="Your Crush's Name" />
+    <button onclick="predict()">Predict 💖</button>
+    <div id="result"></div>
+  </div>
+
+  <footer>Made with 💜 by Naitik Bothara</footer>
+
+  <script>
+    const messages = [
+      ["Your souls hum the same melody of destiny.", "तुम्हारी आत्माएँ एक ही किस्मत की धुन गुनगुनाती हैं।"],
+      ["Love flows between you like starlight across eternity.", "तुम्हारे बीच प्रेम सितारों की तरह अनंत तक बहता है।"],
+      ["Fate smiles when your names are whispered together.", "क़िस्मत मुस्कुराती है जब तुम्हारे नाम एक साथ लिए जाते हैं।"],
+      ["Two hearts, one rhythm — destiny already knows your song.", "दो दिल, एक धुन — किस्मत पहले ही तुम्हारा गीत जानती है।"],
+      ["Your connection was written before time began.", "तुम्हारा रिश्ता समय के जन्म से पहले लिखा गया था।"],
+      ["When your eyes meet, even fate pauses to listen.", "जब तुम्हारी नज़रें मिलती हैं, तो किस्मत भी ठहर जाती है।"],
+      ["The universe itself conspires to unite your hearts.", "पूरा ब्रह्मांड तुम्हारे दिलों को मिलाने की साज़िश करता है।"],
+      ["Your love glows brighter than the constellations above.", "तुम्हारा प्यार ऊपर तारों से भी ज़्यादा चमकता है।"],
+      ["The path of destiny bends gently toward your union.", "क़िस्मत का रास्ता तुम्हारे मिलन की ओर मुड़ता है।"],
+      ["Your hearts beat in the same rhythm as eternity itself.", "तुम्हारे दिल उसी लय में धड़कते हैं जैसी अनंत काल की।"]
+    ];
+
+    function predict() {
+      const name1 = document.getElementById('name1').value.trim();
+      const name2 = document.getElementById('name2').value.trim();
+      const resultBox = document.getElementById('result');
+
+      if (!name1 || !name2) {
+        resultBox.innerHTML = "Please enter both names / दोनों नाम भरें 🌸";
+        return;
+      }
+
+      const seed = (name1 + name2).toLowerCase().split('').reduce((a, c) => a + c.charCodeAt(0), 0);
+      const match = 30 + (seed % 71);
+      const message = messages[seed % messages.length];
+
+      resultBox.innerHTML = `<strong>Compatibility:</strong> ${match}% 💞<br><em>${message[0]}</em><br>${message[1]}`;
+    }
+
+    // Floating hearts animation
+    setInterval(() => {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * window.innerWidth + 'px';
+      heart.style.animationDuration = (6 + Math.random() * 4) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 9000);
+    }, 400);
+  </script>
+</body>
+</html>
