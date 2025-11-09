@@ -3,8 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Love Calculator Online ❤️ DestinyMatchAI</title>
-  <meta name="description" content="Free AI Love Calculator online." />
+
+  <title>Love Calculator Online ❤️ DestinyMatchAI – Free Compatibility Test</title>
+  <meta name="description"
+    content="Free AI Love Calculator online. Enter your name and your partner’s name to get your love compatibility percentage instantly. Accurate, fun & shareable results." />
+  <meta name="keywords"
+    content="love calculator, love calculator online, love compatibility test, love percentage calculator, crush match test, couple compatibility" />
+
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Love Calculator Online ❤️ DestinyMatchAI" />
+  <meta property="og:description" content="Check your love compatibility instantly! Enter two names and get your AI-powered love percentage." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://namanbothara4-boop.github.io/DestinyMatch-AI/" />
+  <meta property="og:site_name" content="DestinyMatchAI" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Free Love Calculator Online ❤️ DestinyMatchAI" />
+  <meta name="twitter:description" content="Instant AI-powered love compatibility score. Try now!" />
 
   <style>
     body {
@@ -14,24 +30,20 @@
       background: radial-gradient(circle at top, #1a001f, #000);
       color: white;
       text-align: center;
-      overflow-x: hidden;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
+      overflow-x: hidden;   /* FIXED: removed overflow hidden cutting footer */
     }
 
     h1 {
-      font-size: 2.8em;
-      margin-top: 40px;
+      font-size: 2.5em;
+      margin-top: 35px;         /* FIXED: reduced height */
       color: #ff9eff;
       text-shadow: 0 0 20px #ff9eff;
     }
 
     .tagline {
-      font-size: 1.2em;
+      font-size: 1.05em;
       color: #e0b3ff;
-      margin-bottom: 25px;
+      margin-bottom: 20px;      /* FIXED: reduced spacing */
       padding: 0 10px;
     }
 
@@ -39,12 +51,11 @@
       background: rgba(255, 255, 255, 0.05);
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 20px;
-      padding: 30px;
+      padding: 25px;
       width: 90%;
-      max-width: 400px;
-      margin: auto;
-      margin-top: 10px;
-      box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+      max-width: 380px;
+      margin: 20px auto;        /* FIXED: reduced large margin */
+      box-shadow: 0 0 25px rgba(255, 0, 255, 0.3);
     }
 
     input {
@@ -61,8 +72,8 @@
     }
 
     button {
-      margin-top: 15px;
-      padding: 12px 25px;
+      margin-top: 10px;
+      padding: 11px 25px;
       background: linear-gradient(90deg, #b300ff, #ff66cc);
       border: none;
       border-radius: 30px;
@@ -79,26 +90,35 @@
     }
 
     #result {
-      margin-top: 30px;
-      font-size: 1.2em;
-      line-height: 1.6;
+      margin-top: 20px;
+      font-size: 1.15em;
+      line-height: 1.5;
       color: #ffd6ff;
       text-shadow: 0 0 10px #ff66cc;
     }
 
-    footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #aaa;
-      padding-bottom: 20px;
+    h2 {
+      margin-top: 40px;      /* FIXED */
+      font-size: 1.7em;
     }
 
-    .poetic-line {
-      margin-top: 25px;
-      font-size: 1.1em;
-      color: #ffb8ff;
-      text-shadow: 0 0 15px #ff66cc;
-      padding: 0 15px;
+    footer {
+      margin: 40px 0 30px;  /* FIXED: guaranteed visibility */
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2.1em;
+        margin-top: 28px;
+      }
+      .tagline {
+        font-size: 1em;
+      }
+      .form-box {
+        padding: 22px;
+      }
     }
   </style>
 </head>
@@ -107,16 +127,50 @@
 
   <h1>Love Calculator ❤️ DestinyMatchAI</h1>
 
- <div class="form-box">
+  <p class="tagline">
+    Discover how compatible you and your partner truly are.  
+    Enter your names below and let AI reveal your <strong>love percentage</strong>,  
+    destiny score, and romantic energy.
+  </p>
+
+  <div class="form-box">
     <h2 style="color:#ffb8ff;">💖 Instant Love Compatibility Test</h2>
-    <p style="font-size:0.95em;color:#e5cfff;margin-top:-5px;">100% free • Instant results • Mobile friendly</p>
+    <p style="font-size:0.9em;color:#e5cfff;margin-top:-5px;">
+      100% free • No login • Instant results • Mobile friendly
+    </p>
 
     <input type="text" id="name1" placeholder="Your Name" />
-    <input type="text" id="name2" placeholder="Partner / Crush Name" />
+    <input type="text" id="name2" placeholder="Your Partner’s / Crush’s Name" />
     <button onclick="predict()">Calculate Love % 💘</button>
 
     <div id="result"></div>
   </div>
+
+  <h2 style="color:#ff9eff;">How The Love Calculator Works</h2>
+  <p style="width:90%;max-width:700px;margin:auto;color:#e0c6ff;">
+    DestinyMatchAI analyzes name vibrations, compatibility patterns,  
+    frequency alignment, and playful AI logic  
+    to calculate your <strong>love match score</strong>.  
+    Fun, meaningful & perfect to share.
+  </p>
+
+  <h2 style="color:#ff9eff;">Frequently Asked Questions</h2>
+  <div style="width:90%;max-width:700px;margin:auto;color:#e0c6ff;font-size:1em;text-align:left;">
+    <h3>Is this love calculator accurate?</h3>
+    <p>This tool uses a playful, fun AI algorithm for compatibility scoring.</p>
+
+
+    
+    <h3>Is DestinyMatchAI free?</h3>
+    <p>Yes! Unlimited compatibility checks — always free.</p>
+
+    
+
+    <h3>Can I share my results?</h3>
+    <p>Yes! Take a screenshot and share it with your crush or partner.</p>
+  </div>
+
+  <footer>Made with 💜 by Naitik Bothara | DestinyMatchAI</footer>
 
   <script>
     const messages = [
@@ -149,8 +203,6 @@
       resultBox.innerHTML = `<strong>Compatibility:</strong> ${match}% 💞<br><em>${message[0]}</em><br>${message[1]}`;
     }
   </script>
-
-  <footer>Made with 💜 by Naitik Bothara</footer>
 
 </body>
 </html>
