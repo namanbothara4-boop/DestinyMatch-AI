@@ -93,14 +93,19 @@
       color: #ffd6ff;
       text-shadow: 0 0 10px #ff66cc;
     }
-    h2 {
-      margin-top: 40px;
-      font-size: 1.7em;
-    }
     footer {
       margin: 40px 0 30px;
       font-size: 0.9em;
       color: #aaa;
+      line-height: 1.6;
+    }
+    footer a {
+      color: #d8aaff;
+      text-decoration: none;
+      margin: 0 6px;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
     @media (max-width: 600px) {
       h1 {
@@ -116,6 +121,7 @@
     }
   </style>
 </head>
+
 <body>
   <h1>Love Calculator ❤️ DestinyMatchAI</h1>
   <p class="tagline">Discover how compatible you and your partner truly are. Enter your names below and let AI reveal your <strong>love percentage</strong>, destiny score, and romantic energy.</p>
@@ -146,7 +152,14 @@
     <p>Yes! Take a screenshot and share it with your crush or partner.</p>
   </div>
 
-  <footer>Made with 💜 by Naitik Bothara | DestinyMatchAI</footer>
+  <footer>
+    Made with 💜 by <strong>Naitik Bothara</strong> | DestinyMatchAI  
+    <br>
+    <a href="about.html">About</a> • 
+    <a href="contact.html">Contact</a> • 
+    <a href="privacy-policy.html">Privacy Policy</a> • 
+    <a href="terms.html">Terms & Conditions</a>
+  </footer>
 
   <script>
     const messages = [
@@ -179,5 +192,8 @@
       resultBox.innerHTML = `<strong>Compatibility:</strong> ${match}% 💞<br><em>${message[0]}</em><br>${message[1]}`;
     }
   </script>
+
 </body>
 </html>
+
+
