@@ -1,48 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dynamic Sitemap</title>
+<script>
+async function generateSitemap() {
+  const res = await fetch('pages.json');
+  const data = await res.json();
+  const urls = data.pages;
 
+  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+  sitemap += `<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
-<url>
-  <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/</loc>
-  <lastmod>2025-11-24T06:21:58+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/about.html</loc>
-  <lastmod>2025-11-24T06:21:58+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/contact.html</loc>
-  <lastmod>2025-11-24T06:21:58+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/privacy-policy.html</loc>
-  <lastmod>2025-11-24T06:21:58+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/terms.html</loc>
-  <lastmod>2025-11-24T06:21:58+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/index.html</loc>
-  <lastmod>2025-11-24T06:21:58+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/disclaimer.html</loc>
-  <lastmod>2025-11-24T06:21:58+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
+  urls.forEach(page => {
+    sitemap += `  <url>\n`;
+    sitemap += `    <loc>${page.url}</loc>\n`;
+    sitemap += `    <priority>0.8</priority>\n`;
+    sitemap += `  </url>\n`;
+  });
 
+  sitemap += `</urlset>`;
 
+  document.body.textContent = sitemap;
+}
 
-</urlset>
+// Run on load
+window.onload = generateSitemap;
+</script>
+</head>
+<body>
+Loading sitemap...
+</body>
+</html>
+
