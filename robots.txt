@@ -1,5 +1,5 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://namanbothara4-boop.github.io/DestinyMatch-AI/sitemap.txt
+Sitemap: https://raw.githubusercontent.com/namanbothara4-boop/DestinyMatch-AI/main/sitemap.txt
 
