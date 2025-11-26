@@ -6,57 +6,70 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
 <url>
   <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/</loc>
   <lastmod>2025-11-26T06:34:30+00:00</lastmod>
   <priority>1.00</priority>
 </url>
+
 <url>
   <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/about.html</loc>
   <lastmod>2025-11-26T06:34:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+
 <url>
   <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/contact.html</loc>
   <lastmod>2025-11-26T06:34:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+
 <url>
   <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/privacy-policy.html</loc>
   <lastmod>2025-11-26T06:34:30+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+
 <url>
   <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/terms.html</loc>
   <lastmod>2025-11-26T06:34:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+
 <url>
   <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/blog/</loc>
   <lastmod>2025-11-26T06:34:31+00:00</lastmod>
   <priority>0.80</priority>
 </url>
+
 <url>
   <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/index.html</loc>
   <lastmod>2025-11-26T06:34:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
+
 <url>
   <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/disclaimer.html</loc>
   <lastmod>2025-11-26T06:34:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
+
 <url>
   <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/blog/tata-sierra.html</loc>
   <lastmod>2025-11-26T06:34:30+00:00</lastmod>
   <priority>0.64</priority>
 </url>
+
+<url>
+  <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/blog/stranger-things-season-5.html</loc>
+  <lastmod>2025-11-26T06:34:30+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
 <url>
   <loc>https://namanbothara4-boop.github.io/DestinyMatch-AI/blog/index.html</loc>
   <lastmod>2025-11-26T06:34:30+00:00</lastmod>
   <priority>0.51</priority>
 </url>
-
 
 </urlset>
